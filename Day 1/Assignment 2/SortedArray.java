@@ -13,20 +13,16 @@ public class SortedArray {
         for (int i = 0; i < z.length; i++) {
             if (x[j] <= y[k]) {
                 z[size++] = x[j];
-                // System.out.println("pass 1"+ Arrays.toString(z));
                 j++;
                 if (j == x.length) {
                     flag = 1;
-                    // System.out.println("flag1");
                     break;
                 }
             } else {
                 z[size++] = y[k];
-                // System.out.println("pass 2"+ Arrays.toString(z));
                 k++;
                 if (k == y.length) {
                     flag = 2;
-                    // System.out.println("flag2");
                     break;
                 }
             }
@@ -35,14 +31,12 @@ public class SortedArray {
             j1 = j;
             for (int p1 = k; p1 < z.length-j1; p1++) {
                 z[j+k] = y[p1];
-                // System.out.println("pass 11"+ Arrays.toString(z));
                 j++;
             }
         } else if (flag == 2) {
             k1 = k;
             for (int p = j; p < z.length-k1; p++) {
                 z[k+j] = x[p];
-                // System.out.println("pass 22"+ Arrays.toString(z));
                 k++; 
             }
         }
