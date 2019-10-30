@@ -1,0 +1,15 @@
+// Let Queue, q = {1,2,3,4,5}
+
+Stack stack = new Stack();
+while(!q.isEmpty()){
+	stack.push(q.dequeue());
+}
+
+//after pushing into the stack the result is [1,2,3,4,5]
+
+while(!stack.isEmpty()) {
+	q.enqueue(stack.pop());
+}
+
+// after enqueue the result is [5,4,3,2,1]
+
