@@ -10,7 +10,7 @@ enqueue 0, dequeue, enqueue 1, dequeue, enqueue 2, dequeue, enqueue 3, dequeue, 
 
 (b)	4 6 8 7 5 3 2 9 0 1 - impossible
 enqueue 0, enqueue 1, enqueue 2, enqueue 3, enqueue 4, dequeue
-[0, 1, 2, 3, 4   it gives 0 instead of 4 after dequeue operation, which makes the sequence could not occur.
+[0, 1, 2, 3, 4   it gives 0 instead of the 4 after dequeue operation, which makes the sequence could not occur.
 
 (c)	2 5 6 7 4 8 9 3 1 0 - impossible
 enqueue 0, enqueue 1, enqueue 2, dequeue
