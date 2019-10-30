@@ -1,0 +1,40 @@
+Assignment 1
+
+Suppose that a client performs an intermixed sequence of (stack) push and pop operations. The push operations put the integers 0 through 9 in order onto the stack; the pop operations print out the return values. Which of the following sequence(s) could not occur?
+
+Stack operations to push integers from 0 to 9 in order 
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+a)	4 3 2 1 0 9 8 7 6 5 - Possible
+push (0), push(1), push(2), push(3), push(4), pop(), pop(), pop(), pop(), pop(), push(5), push(6), push(7), push(8), push(9), pop(), pop(), pop(), pop(), pop()
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+b)	4 6 8 7 5 3 2 9 0 1 - impossible
+push(0), push(1), push(2), push(3), push(4), pop(), push(5), push(6), pop(), push(7), push(8), pop(), pop(), pop(), pop(), pop(), push(9), pop(), pop
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9,    it removes 1 instead of 0 and hence it could not occur the sequence.
+
+c)	2 5 6 7 4 8 9 3 1 0 - Possible
+Push(0), push(1), push(2), pop(), push(3), push(4), push(5), pop(), push(6), pop(), push(7), pop(), pop(), push(8), pop(), push(9), pop(), pop(), pop(), pop()
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+d)	4 3 2 1 0 5 6 7 8 9 - Possible
+Push(0), push(1), push(2), push(3), push(4), pop(), pop(), pop(), pop(), pop(), push(5), pop(), push(6), pop(), push(7), pop(), push(8), pop(), push(9), pop()
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+e)	1 2 3 4 5 6 9 8 7 0 - Possible
+Push(0), push(1), pop(), push(2), pop(), push(3), pop(), push(4), pop(), push(5), pop(), push(6), pop(), push(7), push(8), push(9), pop(), pop(), pop(), pop()
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+f)	0 4 6 5 3 8 1 7 2 9 - impossible
+Push(0), pop(), push(1), push(2), push(3), push(4), pop(), push(5), push(6), pop(), pop(), pop(), push(7), push(8), pop(), pop()
+[0, 1, 2, 3, 4, 5, 6, 7, 8, it pops 7 instead of 1 and hence it could not occur the sequence.
+
+g)	1 4 7 9 8 6 5 3 0 2 - impossible
+Push(0), push(1), pop(), push(2), push(3), push(4), pop(), push(5), push(6), push(7), pop(), push(8), push(9), pop(), pop(), pop(), pop(), pop(), pop(), pop()
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] next pop gives 2 instead of 0 and hence it could not occur any sequence.
+
+h)	2 1 4 3 6 5 8 7 9 0 - Possible
+Push(0), push(1), push(2), pop(), pop(), push(3), push(4), pop(), pop(), push(5), push(6), pop(), pop(), push(7), push(8), pop(), pop(), push(9), pop(), pop()
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
