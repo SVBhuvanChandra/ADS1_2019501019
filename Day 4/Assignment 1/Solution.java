@@ -1,5 +1,6 @@
 /**
  * This is the solution class for Quick sorting.
+ * @author Bhuvan
  */
 class Solution {
 	/**
