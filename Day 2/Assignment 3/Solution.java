@@ -1,45 +1,50 @@
-import java.io.*;
 import java.util.*;
-class Solution{
-	public static String isMatching(String str){
-		// fill you code Here ..
-		int flag1 = 2;
-		int flag2 = 2;
-		int flag3 = 2;
-		char[] arr = str.toCharArray();
-		Stack <Character> a = new Stack<>();
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] == '(' || arr[i] == '[' || arr[i] == '{') {
-				a.push(arr[i]);
-			} else {
-				if (a.isEmpty()  == false && arr[i] == ')') {
-					if (a.pop() == '(') {
-						flag1 = 1;
-					} else {
-						flag1 = 0;
-						break;
-					}
-				} else if (a.isEmpty()  == false && arr[i] == ']') {
-					if (a.pop() == '[') {
-						flag2 = 1;
-					} else {
-						flag2 = 0;
-						break;
-					}
-				} else if (a.isEmpty()  == false && arr[i] == '}') {
-					if (a.pop() == '{') {
-						flag3 = 1;
-					} else {
-						flag3 = 0;
-						break;
-					}
-				}
-			}
-		}
-		if (flag1 != 0 && flag2 != 0 && flag3 != 0) {
-			return "YES";
-		} else {
+
+/**
+ * Solution class is the implementation.
+ * @author Bhuvan
+ */
+class Solution {
+	public static String isMatching(String str) {
+		// fill you code Here
+		// Stack<Character> stack = new Stack<>();
+		LinkedListStack stack = new LinkedListStack();
+		int n = str.length();
+		int countPush = 0;
+		int countPop = 0;
+		if (str.charAt(0) == ')' || str.charAt(0) == ']' || str.charAt(0) == '}') {
 			return "NO";
 		}
+		for(int i = 0; i < n; i++) {
+			if(str.charAt(i)=='(' || str.charAt(i)=='['  || str.charAt(i)=='{') {
+				stack.push(str.charAt(i));
+				countPush += 1;
+			}
+			else if (str.charAt(i) == ')') {
+				if (stack.head.item == '(') {
+					stack.pop();
+					countPop += 1;
+				}
+				else return "NO";
+			}
+			else if (str.charAt(i) == ']') {
+				if (stack.head.item == '[') {
+					stack.pop();
+					countPop += 1;
+				}
+				else return "NO";
+			}
+			else if (str.charAt(i) == '}') {
+				if (stack.head.item == '{') {
+					stack.pop();
+					countPop += 1;
+				}
+				else return "NO";
+			}
+		}
+		if (countPush == countPop) {
+			return "YES";
+		}
+		return "NO";
 	}
 }
