@@ -1,5 +1,6 @@
 /**
  *  Class implementation for MergeSort.
+ * @author Bhuvan
  */
 public class MergeSort {
 
