@@ -1,5 +1,6 @@
 /**
  * Solution class for implementing merge sort.
+ * @author Bhuvan
  */
 class Solution {
 	/**
