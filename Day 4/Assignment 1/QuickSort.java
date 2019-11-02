@@ -1,10 +1,10 @@
 /**
- * . QuickSort implementation.
+ * QuickSort implementation.
+ * @author Bhuvan
  */
 public class QuickSort {
     /**
      *sort method takes the array to be sorted
-     *
      * @param a array to be sorted
      */
     public static void sort(final Comparable[] a) {
