@@ -488,6 +488,12 @@ public void testCase79() {
   String res = "YES";
   Assert.assertEquals(res, Solution.isMatching(str));
 }
+@Test
+public void testCase80() {
+  String str = "[(])";
+  String res = "NO";
+  Assert.assertEquals(res, Solution.isMatching(str));
+}
 
 }
 

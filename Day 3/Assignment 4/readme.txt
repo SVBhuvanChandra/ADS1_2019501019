@@ -1,9 +1,24 @@
-Elementary Sorts:
+Description :
+=============
+You have a cricket team information and you need to sort them based on certain criteria.
 
-Given an Integer array sort the array using insertion and selection sort
+Assuming that each Team name is unique, you have to form a leader board
 
-You were given a Solution file contains two methods sortInsertion and sortSelection which accepts an integer array as parameter.
+For example
 
-sortInsertion – Sort the array passed as parameter by using insertion sort and return the array.
+TeamName #Wins #Losses #Draws
 
-SortSelection - Sort the array passed as parameter by using selection sort and return the array.
+England 	4 	2 		3
+India 		5 	2 		4
+Australia 	6 	2 		3
+SouthAfrica 5 	3 		4
+Bangladesh 	3 	4 		2
+Zimbabwe 	3 	4 		6
+Ireland 	3 	4 		1
+
+Sort Criteria:
+==============
+Sort the teams in descending order based on the attribute Wins. If two teams have same number of wins, then sort them in ascending order based on attribute losses and if two teams have same number of losses then sort them in descending order based on attribute draws.
+
+
+You were given a Solution class and Team class, Solution class contains sort method which accepts a team array as parameter. Sort the team array based on the above sorting criteria and return a sorted team array.
