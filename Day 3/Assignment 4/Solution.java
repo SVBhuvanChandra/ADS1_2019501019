@@ -1,6 +1,7 @@
 import java.util.*;
 /**
  * This is the solution class for making a leader broard.
+ * @authour : Bhuvan
  */
 class Solution {
 	/**
