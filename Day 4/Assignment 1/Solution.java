@@ -6,7 +6,7 @@ class Solution {
 	/**
 	 * quickSort() method method takes the array and sorts the array.
 	 * @param arr array to be sorted
-	 * @return the array thats sorted
+	 * @return the array thats sorted.
 	 */
 	public static int[] quickSort(final int[] arr) {
 		Integer[] arr1 = new Integer[arr.length];
