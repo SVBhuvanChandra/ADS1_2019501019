@@ -4,13 +4,14 @@
 public class MergeSort {
 
     /**
-     * . merge sort method takes in the arrays and the boundaries
+     * merge() method takes arrays and positions as
+     * input and all the boundary values are the parameters for it.
      *
-     * @param a   original array
-     * @param aux copied array
-     * @param lo  low boundary
+     * @param a   Actual array
+     * @param aux Duplicalte array
+     * @param lo  lower boundary
      * @param mid mid value
-     * @param hi  high boundary
+     * @param hi  upper boundary
      */
     private static void merge(final Comparable[] a, final Comparable[] aux, final int lo, final int mid, final int hi) {
         for (int k = lo; k <= hi; k++) {
@@ -30,12 +31,12 @@ public class MergeSort {
     }
 
     /**
-     * . sort method takes in the arrrays and boundaries
-     *
-     * @param a   original array
-     * @param aux copied array
-     * @param lo  low boundary
-     * @param hi  high boundary
+     * sort() method takes arrays and positions as
+     * inputs and lower and upper boundary as parameters.
+     * @param a   Actual array
+     * @param aux Duplicate array
+     * @param lo  lower boundary
+     * @param hi  upper boundary
      */
     private static void sort(final Comparable[] a, final Comparable[] aux, final int lo, final int hi) {
         if (hi <= lo)
@@ -47,9 +48,8 @@ public class MergeSort {
     }
 
     /**
-     * . overloaded sort method takes array to be sorted
-     *
-     * @param a array to be sorted
+     * method overloading of sort() method.
+     * @param a array to be sorted.
      */
     public static void sort(final Comparable[] a) {
         Comparable[] aux = new Comparable[a.length];
@@ -57,8 +57,7 @@ public class MergeSort {
     }
 
     /**
-     * . less method compares values
-     *
+     * less() method for comaparision.
      * @param v value1
      * @param w value2
      * @return true if less and false if not

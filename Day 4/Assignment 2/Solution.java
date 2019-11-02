@@ -1,12 +1,11 @@
 /**
- * . solution class
+ * Solution class for implementing merge sort.
  */
 class Solution {
 	/**
-	 * . merge sort takes in the array to be sorted
-	 *
-	 * @param arr array to be sorted
-	 * @return sorted array
+	 * mergesort() takes the array as input.
+	 * @param arr array need to be sorted.
+	 * @return returns sorted array.
 	 */
 	public static String[] mergeSort(final String[] arr) {
 		// fill you code Here
