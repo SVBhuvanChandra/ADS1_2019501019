@@ -6,7 +6,7 @@
  * passed / failed when you run this TestRunner class.
  * 
  * There will be a detailed information about which test cases have been failed 
- * or passed.
+ * or passed..
  * 
  * @author Deepak Kumar
  * 

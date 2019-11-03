@@ -1,7 +1,7 @@
 import java.util.*;
 /**
  * Solutuon for josephus problem.
- * @author Bhuvan.
+ * @author Bhuvan..
  */
 class Solution{
 	/**
