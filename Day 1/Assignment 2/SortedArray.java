@@ -1,5 +1,13 @@
 import java.util.*;
+/**
+ * Class sorted array.
+ * @author Bhuvan.
+ */
 public class SortedArray {
+    /**
+     * Main method in which sorting implementation is performed.
+     * @param args input parameters.
+     */
     public static void main(String[] args) {
         int [] x = {1,3,5,7,9};
         int [] y = {2,4,6,8,10,12,14};
