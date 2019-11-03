@@ -1,8 +1,18 @@
 import java.util.*;
+/**
+ * Class for ThreeSum verification.
+ * @author Bhuvan
+ */
 public class ThreeSum {
     int[] arr = {30, -40, -20, -10, 40, 0, 10, 5};
     int c;
     int count = 0;
+    /**
+     * Binary search implementation.
+     * @param a array
+     * @param k key
+     * @return index of the key in the array.
+     */
     public int binarySearch(int[] a, int k) {
         int low = 0;
         int high = a.length-1;
@@ -18,6 +28,10 @@ public class ThreeSum {
         }
         return -1;
     }
+    /**
+     * Main method to perform sort.
+     * @param args input parameters.
+     */
     public static void main(String[] args) {
         ThreeSum t = new ThreeSum();
         Arrays.sort(t.arr);
