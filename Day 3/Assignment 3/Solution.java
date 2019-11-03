@@ -1,5 +1,6 @@
 /**
  * This is soultion class, the implementaions of Select and Insertion sorts.
+ * @author Bhuvan
  */
 class Solution{
 	/**
