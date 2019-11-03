@@ -1,7 +1,19 @@
 import java.util.*;
+/**
+ * Pairs class to find the number of paired elements
+ * in the given array.
+ * @author Bhuvan
+ */
 public class Pairs {
+    /**
+     * Main method to perform the sort.
+     * @param args input parameters.
+     */
     public static void main (String[] args) {
         System.out.println("Enter no. of elements\n");
+        /**
+         * Implemeting scanner to scan input from terminal.
+         */
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int[] arr = new int[n];
