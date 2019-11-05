@@ -1,6 +1,6 @@
 /**
  * This is JUnit that tests the lower method in StringHandling class.
- * This contains 13 testcases.
+ * This contains 13 testcases..
  * 
  * Please don't run this file.
  * You can add your own test cases to this file by just copy and 
