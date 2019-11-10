@@ -29,6 +29,7 @@ class MaxPQ {
     /**
      * Method to delete the max item in the queue.
      */
+    // Time complexity is O(1)
     public double delMax() {
         double max = pq[1];
         exch(1, N--);
@@ -40,6 +41,7 @@ class MaxPQ {
      * Performing swim action.
      * @param k key
      */
+    // Time complelxity is O(nlogn)
     public void swim(int k) {
         int index = k;
         while (index > 1 && pq[index] > pq[index / 2]) {
@@ -51,6 +53,7 @@ class MaxPQ {
      * Method to perform the sink.
      * @param k key.
      */
+    // Time complelxity is O(nlogn)
     public void sink(int k) {
         int index = k;
         while (2*index <= N) {

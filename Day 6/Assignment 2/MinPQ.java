@@ -23,6 +23,7 @@ class MinPQ {
      * method to insert the element in the queue.
      * @param item input.
      */
+    // Time complelxity is O(nlogn)
     public void insert(double item) {
         pq[++N] = item;
         swim(N);
@@ -31,6 +32,7 @@ class MinPQ {
      * Method to delete the element from the queue.
      * @return min element from the queue.
      */
+    // Time complelxity is O(1)
     public double delMin() {
         double min = pq[1];
         exch(1, N--);
@@ -42,6 +44,7 @@ class MinPQ {
      * Method to perform the swim operation.
      * @param k key
      */
+    // Time complelxity is O(nlogn)
     public void swim(final int k) {
         int index = k;
         while (index > 1 && pq[index] < pq[index / 2]) {
@@ -53,6 +56,7 @@ class MinPQ {
      * Method to perform the sink operation.
      * @param k key
      */
+    // Time complelxity is O(nlogn)
     public void sink(int k) {
         int index = k;
         while (2*index <= N) {
