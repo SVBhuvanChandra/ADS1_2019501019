@@ -31,6 +31,7 @@ public class SequentialSearchST<Key, Value> {
      * @param k key
      * @param v value
      */
+    // Time complexity is O(n)
     public void put(Key k, Value v) {
         for (int i = 0; i < size; i++) {
             if (keys[i].equals(k)) {
@@ -50,6 +51,7 @@ public class SequentialSearchST<Key, Value> {
      * @param k key
      * @return value
      */
+    // Time complexity is O(n)
     public Value get(Key k) {
         if (size == 0) {
             return null;
@@ -76,6 +78,7 @@ public class SequentialSearchST<Key, Value> {
     /**
      * Method to convert into string format.
      */
+    // Time complexity is O(n)
     public String toString() {
         String str = "";
         for (int i = size - 1; i >= 0; i--) {
@@ -86,6 +89,7 @@ public class SequentialSearchST<Key, Value> {
     /**
      * Method to resize the arrays.
      */
+    // Time complexity is O(n)
     public void resize() {
         keys = Arrays.copyOf(keys, 2*size);
         values = Arrays.copyOf(values, 2*size);
@@ -95,6 +99,7 @@ public class SequentialSearchST<Key, Value> {
      * @param k key
      * @return true / fasle
      */
+    // Time complexity is O(n)
     public boolean contains(Key k) {
         for (int i = 0; i < size; i++) {
             if (keys[i].equals(k)) {
