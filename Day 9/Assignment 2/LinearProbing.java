@@ -35,6 +35,7 @@ public class LinearProbing<Key, Value> {
      * @param k key
      * @param v value
      */
+    // Time complexity O(n)
     public void put(Key k, Value v) {
         if (k == null) {
             return;
@@ -55,6 +56,7 @@ public class LinearProbing<Key, Value> {
      * @param k key
      * @return value
      */
+    // Time complexity O(n)
     public Value get(Key k) {
         if (k == null) {
             return null;
@@ -70,6 +72,7 @@ public class LinearProbing<Key, Value> {
     /**
      * Method to delete the key.
      */
+    // Time complexity O(n)
     public void delete(Key k) {
         if (k == null) {
             return;
@@ -96,6 +99,7 @@ public class LinearProbing<Key, Value> {
      * @param k key
      * @param v value
      */
+    // Time complexity O(n)
     public void createDict(Key[] k, Value[] v) {
         for (int i = 0; i < k.length; i++) {
             put(k[i], v[i]);
@@ -104,6 +108,7 @@ public class LinearProbing<Key, Value> {
     /**
      * Method to display the key.
      */
+    // Time complexity O(n)
     public void display() {
         for (int i = 0; i < keys.length; i++) {
             if (keys[i] != null){
