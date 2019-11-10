@@ -58,6 +58,7 @@ public class BST<Value extends Comparable<Value>> {
 	 * This method inserts the element into the array
 	 * @param value value
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public void put(final Value value) {
 		int index = 0;
 		if (counter == 0) {
@@ -86,6 +87,7 @@ public class BST<Value extends Comparable<Value>> {
 	/**
 	 * This method updates the left array index and the right array index
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public void setChildIndexes() {
 		for (int i = 0; i < data.length; i++) {
 			if (data[i] == null) {
@@ -105,6 +107,7 @@ public class BST<Value extends Comparable<Value>> {
 	 * @param index index
 	 * @return left child index.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private int getLeftChildIndex(final int index) {
 		int childIndex = (2 * index) + 1;
 		if (data[childIndex] == null) {
@@ -117,6 +120,7 @@ public class BST<Value extends Comparable<Value>> {
 	 * @param index index
 	 * @return right child index.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private int getRightChildIndex(final int index) {
 		int childIndex = (2 * index) + 2;
 		if (data[childIndex] == null) {
@@ -129,6 +133,7 @@ public class BST<Value extends Comparable<Value>> {
 	 * @param value value
 	 * @return value.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public Value get(final Value value) {
 		int index = 0;
 		int compValue = value.compareTo(data[index]);
@@ -151,6 +156,7 @@ public class BST<Value extends Comparable<Value>> {
 	/**
 	 * method displays the data
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public void displayData() {
 		for (int i = 0; i < data.length; i++) {
 			if (data[i] == null) {
@@ -171,6 +177,7 @@ public class BST<Value extends Comparable<Value>> {
 	/**
 	 * This method performs the resize operation
 	 */
+	// Time complexity worst - O(n)
 	private void resize() {
 		Value[] temp = Arrays.copyOf(this.data, this.data.length * 2);
 		this.data = temp;
