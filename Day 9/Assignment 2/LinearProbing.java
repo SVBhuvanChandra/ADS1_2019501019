@@ -1,18 +1,40 @@
 import java.util.Arrays;
+/**
+ * Class Linear probing.
+ * @author Bhuvan
+ */
 public class LinearProbing<Key, Value> {
+    /**
+     * Key array
+     */
     Key[] keys;
+    /**
+     * Value array
+     */
     Value[] values;
-
+    /**
+     * Constructor of the above class.
+     * @param ks key array
+     * @param vs Value array
+     */
     public LinearProbing(Key[] ks, Value[] vs) {
         keys = (Key[]) new Object[ks.length * 100];
         values = (Value[]) new Object[ks.length * 100];
         createDict(ks, vs);
     }
-
+    /**
+     * Method to find the hashcode.
+     * @param k key
+     * @return hash key
+     */
     public int hash(Key k) {
         return ((k.hashCode() & 0x7fffffff) % (keys.length));
     }
-
+    /**
+     * Method to inser the key
+     * @param k key
+     * @param v value
+     */
     public void put(Key k, Value v) {
         if (k == null) {
             return;
@@ -28,7 +50,11 @@ public class LinearProbing<Key, Value> {
         keys[i] = k;
         values[i] = v;
     }
-
+    /**
+     * Method to find the key and value.
+     * @param k key
+     * @return value
+     */
     public Value get(Key k) {
         if (k == null) {
             return null;
@@ -41,7 +67,9 @@ public class LinearProbing<Key, Value> {
         }
         return null;
     }
-
+    /**
+     * Method to delete the key.
+     */
     public void delete(Key k) {
         if (k == null) {
             return;
@@ -63,13 +91,19 @@ public class LinearProbing<Key, Value> {
             }
         }
     }
-
+    /**
+     * Method to create a dictionary.
+     * @param k key
+     * @param v value
+     */
     public void createDict(Key[] k, Value[] v) {
         for (int i = 0; i < k.length; i++) {
             put(k[i], v[i]);
         }
     }
-
+    /**
+     * Method to display the key.
+     */
     public void display() {
         for (int i = 0; i < keys.length; i++) {
             if (keys[i] != null){
@@ -78,12 +112,15 @@ public class LinearProbing<Key, Value> {
         }
         System.out.println("==================");
     }
-
+    /**
+     * Main method.
+     * @param args
+     */
     public static void main(String[] args) {
-        String str = "I am Vivek I am this I know dash";
+        String str = "Bhuvan always beleives that hardwork will always beats the tallent";
         String[] test1_keys = str.split(" ");
         System.out.println(Arrays.toString(test1_keys));
-        Integer[] test1_vals = {1,2,3,4,5,6,7,8,9};
+        Integer[] test1_vals = {1,2,3,4,5,6,7,8,9,10,11,12,13};
         System.out.println(Arrays.toString(test1_vals));
         LinearProbing<String, Integer> lp1 = new LinearProbing(test1_keys, test1_vals);
         lp1.display();
