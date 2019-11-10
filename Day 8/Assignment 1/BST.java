@@ -124,6 +124,7 @@ Value extends Comparable<Value>> {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private Node put(final Node node, final Key key, final Value value) {
 		if (node == null) {
 			Node newNode = new Node(key, value, 1);
@@ -145,6 +146,7 @@ Value extends Comparable<Value>> {
 	 * @param  key key
 	 * @param value value
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public void myPut(final Key key, final Value value) {
 		if (root == null) {
 			Node newNode = new Node(key, value, 1);
@@ -195,6 +197,7 @@ Value extends Comparable<Value>> {
 	 * @param key key
 	 * @return Node
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private Node delete(final Node node, final Key key) {
 		if (node == null) {
 			return null;
@@ -218,6 +221,7 @@ Value extends Comparable<Value>> {
 	/**
 	 * This method deletes the minimum element
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public void deleteMin() {
 		root = deleteMin(root);
 		return;
@@ -249,6 +253,7 @@ Value extends Comparable<Value>> {
 	 * @param node node
 	 * @return returns the updated subtree.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private Node deleteMax(final Node node) {
 		if (node.right == null) {
 			return node.left;
@@ -263,6 +268,7 @@ Value extends Comparable<Value>> {
 	 * @param node  The node
 	 * @return min node in that sub tree.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private Key min(final Node node) {
 		Node current = node;
 		while (current.left != null) {
@@ -275,6 +281,7 @@ Value extends Comparable<Value>> {
 	 * @param key key
 	 * @return value
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public Value get(final Key key) {
 		if (key == null) {
 			return null;
@@ -289,6 +296,7 @@ Value extends Comparable<Value>> {
 	 * @param key key
 	 * @return value of the key.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private Value get(final Node node, final Key key) {
 		Value result = null;
 		if (node != null) {
@@ -308,6 +316,7 @@ Value extends Comparable<Value>> {
 	 * This method returns the minimum key in BST
 	 * @return min key.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public Key min() {
 		Node current = root;
 		if (current == null) {
@@ -322,6 +331,7 @@ Value extends Comparable<Value>> {
 	 * This method returns the max key in BST
 	 * @return max key.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public Key max() {
 		Node current = root;
 		if (current == null) {
@@ -339,6 +349,7 @@ Value extends Comparable<Value>> {
 	 * @param key key
 	 * @return keys <= given key.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public Key floor(final Key key) {
 		if (key == null || size() == 0) {
 			return null;
@@ -355,6 +366,7 @@ Value extends Comparable<Value>> {
 	 * @param key key
 	 * @return floor
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private Node floor(final Node node, final Key key) {
 		if (node == null) {
 			return null;
@@ -379,6 +391,7 @@ Value extends Comparable<Value>> {
 	 * @param key key
 	 * @return returns keys >= key
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public Key ceiling(final Key key) {
 		if (key == null) {
 			return null;
@@ -395,6 +408,7 @@ Value extends Comparable<Value>> {
 	 * @param key key
 	 * @return returns keys >= key
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private Node ceiling(final Node node, final Key key) {
 		// base case
 		if (node == null) {
@@ -420,6 +434,7 @@ Value extends Comparable<Value>> {
 	 * @param index
 	 * @return value
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public Key select(final int index) {
 		if (index < 0 || index > size()) {
 			return null;
@@ -437,6 +452,7 @@ Value extends Comparable<Value>> {
 	 * @param index index
 	 * @return value
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	private Node select(final Node node, final int index) {
 		if (node == null) {
 			return null;
@@ -456,6 +472,7 @@ Value extends Comparable<Value>> {
 	 * @param key key
 	 * @return count of keys less than the key.
 	 */
+	// Time complexity worst - O(n) and Average - O(logn)
 	public int rank(final Key key) {
 		int rank = 0;
 		Node current = root;
@@ -479,6 +496,7 @@ Value extends Comparable<Value>> {
      * This method returns a queue with the data in BST
 	 * @return queue
 	 */
+	// Time complexity worst - O(n)
 	public Iterable<Key> displayData() {
 		Queue<Key> queue = new Queue<Key>();
 		inorder(root, queue);
@@ -486,7 +504,7 @@ Value extends Comparable<Value>> {
 	}
 	/**
 	 * This method implements the inorder traversal to get the
-	 * elements from the data.
+	 * elements from the data..
 	 * @param node node
 	 * @param queue queue
 	 */
