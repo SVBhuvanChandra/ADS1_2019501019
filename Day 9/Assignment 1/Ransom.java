@@ -53,6 +53,7 @@ public class Ransom {
       * method to insert the key.
       * @param k key
       */
+      // Time complexity O(n)
      public void put(String k) {
          if (k == null) {
              return;
@@ -77,6 +78,7 @@ public class Ransom {
       * @param k key
       * @return value.
       */
+      // Time complexity O(n)
      public int get(String k) {
          int indx  = hash(k);
          for (Node x = arr[indx]; x != null; x = x.next) {
@@ -90,6 +92,7 @@ public class Ransom {
       * Method to create dictionary.
       * @param str string array.
       */
+      // Time complexity O(n)
      public void createDict(String[] str) {
          for(int i = 0; i < str.length; i++) {
              put(str[i]);
@@ -100,6 +103,7 @@ public class Ransom {
       * @param that input.
       * @return true or false.
       */
+      // Time complexity O(n)
      public boolean check(Ransom that) {
          for (int i = 0; i < this.arr.length; i++) {
             Node x = this.arr[i];
@@ -117,6 +121,7 @@ public class Ransom {
      /**
       * Method to show the output string.
       */
+      // Time complexity O(n)
      public void showString() {
          for (int i = 0; i < arr.length; i++) {
              Node x = arr[i];
