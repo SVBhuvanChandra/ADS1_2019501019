@@ -29,11 +29,12 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         size = 0;
     }
 
-    /**.
+    /**
      * This method is to insert the key with the help of rank() method.
      * @param k key
      * @param v value
      */
+    // Time complexity is O(n)
     public void put(Key k, Value v) {
         if (v == null) {
             int i = rank(k);
@@ -83,6 +84,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      * @param k key
      * @return value or null.
      */
+    // Time complexity is O(n)
     public Value get(Key k) {
         int index = rank(k);
         if (contains(k)) {
@@ -95,6 +97,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      * Method returns the maximum key.
      * @return max key or null
      */
+    // Time complexity is O(n)
     public Key max() {
         if (size == 0) {
             return null;
@@ -108,6 +111,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      * @param k key
      * @return position of the key.
      */
+    // Time complexity is O(n)
     public int rank(Key k) {
         /**
          * Field to store the low key.
@@ -136,6 +140,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
     /**
      * Method to delete the minimim values of the keys and values.
      */
+    // Time complexity is O(n)
     public void deleteMin() {
         for (int i = 0; i < size - 1; i++) {
             keys[i] = keys[i + 1];
@@ -155,6 +160,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
     /**
      * Method to resize the array.
      */
+    // Time complexity is O(n)
     public void resize() {
         keys = Arrays.copyOf(keys, 2*size);
         values = Arrays.copyOf(values, 2*size);
@@ -164,6 +170,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      * @param k key
      * @return floor value.
      */
+    // Time complexity is O(n)
     public Key floor(Key k) {
         int i = rank(k);
         if (i < size && keys[i].equals(k)) {
@@ -180,7 +187,6 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         for (int i = 0; i < size; i++) {
             str += keys[i] + " ";
         }
-        // str = str + keys[size - 1] + "]";
         return str;
     }
 }
