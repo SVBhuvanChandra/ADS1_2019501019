@@ -47,6 +47,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
             size--;
             return;
         }
+        // Update key
         int i = rank(k);
         if (i < size && keys[i].equals(k)) {
             values[i] = v;

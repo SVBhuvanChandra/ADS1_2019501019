@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Deque",
+            "request": "launch",
+            "mainClass": "Deque",
+            "projectName": "ADS1_2019501019_38602c32"
+        }
+    ]
+}
