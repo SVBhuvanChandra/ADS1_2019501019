@@ -1,0 +1,27 @@
+1) Difference between Queue implementation using single linked list and Circular linked list.
+
+In a singly linked implementation 
+the enqueue operation performs inserton at the rear - complexity is O(1)
+the dequeue operation performs deletion at the first - complexity is O(1)
+But, this require 2 pointers named (first, rear)
+
+In a singly Circular linked list implementation
+the enque operation performs insertion at the last -complexity is O(1).
+the dequeue operation performs deletion at the last - complexity is O(1).
+But, this require only 1 pointer (last).
+
+So, in coparassion we can reduce the space complexity by using the Circular linked list.
+
+2) Difference between Queue implementation using arrays and Circular linked list.
+
+In a singly Circular linked list implementation
+the enque operation performs insertion at the last -complexity is O(1).
+the dequeue operation performs deletion at the last - complexity is O(1).
+But, this require only 1 pointer (last).
+
+In a array implementation
+the enqueue operation performs insertion at an index by iterating the arr - complexity is O(1).
+the dequeue operation performs deletion at first i.e., 0th position but after that it needs exchanges of array - complexity O(n).
+Hence time complexity is more in array implementation.
+
+
