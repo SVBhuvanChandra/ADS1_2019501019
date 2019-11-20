@@ -52,6 +52,8 @@ public class BSTCheck {
 	}
 	/**
 	 * Method to check the tree is satisfying the BST property or not?
+	 * 
+	 * The Time complexity is O(N).
 	 * @param n root node.
 	 * @param min min node.
 	 * @param max max node.
