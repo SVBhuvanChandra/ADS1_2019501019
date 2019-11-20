@@ -111,16 +111,16 @@ public class Deque<Item> implements Iterable<Item> {
             if (siz == 1) {
                 last = null;
                 first = null;
-                // siz--;
-                // return item;
+                siz--;
+                return item;
         } else {
             first.next.prev = null;
             first = first.next;
-            // siz--;
-            // return item;
+            siz--;
+            return item;
         }
-        siz--;
-        return item;
+        // siz--;
+        // return item;
     }
 
     // remove and return the item from the back
@@ -136,16 +136,16 @@ public class Deque<Item> implements Iterable<Item> {
         if (siz == 1) {
             last = null;
             first = null;
-            // siz--;
-            // return item;
+            siz--;
+            return item;
         } else {
             last.prev.next = null;
             last = last.prev;
-            // siz--;
-            // return item;
+            siz--;
+            return item;
         }
-        siz--;
-        return item;
+        // siz--;
+        // return item;
     }
     // private void showList() {
     //     for (Node i = first; i != null; i = i.next){

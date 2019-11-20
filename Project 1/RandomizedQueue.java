@@ -66,9 +66,14 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         // int a = r.nextInt(siz);
         Item b = arr[r];
         arr[r] = null;
-        for (int w = r; w < siz; w++) {
+        int w = r;
+        while (w < siz) {
             arr[w] = arr[w + 1];
+            w++;
         }
+        // for (int w = r; w < siz; w++) {
+        //     arr[w] = arr[w + 1];
+        // }
         siz--;
         return b;
     }
