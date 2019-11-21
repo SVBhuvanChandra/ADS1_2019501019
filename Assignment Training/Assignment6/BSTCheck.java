@@ -60,14 +60,21 @@ public class BSTCheck {
 	 * @return true or false.
 	 */
 	public boolean isOrdered(Node n, Node min, Node max) {
+		Node root = x;
 		if (n == null) {
 			return true;
 		}
 		min = n.left;
 		max = n.right;
+		// if (root.item < min.item) {
+		// 	return true;
+		// }
 		if (min != null && min.item > n.item) {
 			return false;
 		}
+		// if (root.item > max.item) {
+		// 	return true;
+		// }
 		if (max != null && max.item < n.item) {
 			return false;
 		}
@@ -79,6 +86,7 @@ public class BSTCheck {
 	public static void main(String[] args) {
 		BSTCheck bc = new BSTCheck();
 		int[] input = {5, 3, 7, 2, 4, 6, 8};
+		// int[] input = {5, 4, 9, 1, 6, 7, 10};
 		bc.put(input);
 		System.out.println(bc.isOrdered(bc.x, bc.x.left, bc.x.right));
 
